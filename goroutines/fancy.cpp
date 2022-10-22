@@ -37,7 +37,7 @@ static constexpr const char* const COMMAND =
 int fetch_nasa_image() { return std::system(COMMAND); }
 
 using namespace std::chrono;
-int cpu_intensive(int n) {
+int CPUIN(int n) {
   const auto tbeg = system_clock::now();
   const auto id = std::this_thread::get_id();
   LOG("[c++] starting fib(" << n << ") on thread " << id << ".");
@@ -48,7 +48,7 @@ int cpu_intensive(int n) {
   return res;
 }
 
-int io_intensive() {
+int IOIN() {
   const auto tbeg = system_clock::now();
   const auto id = std::this_thread::get_id();
   LOG("[c++] starting to download NASA image on thread " << id << ".");

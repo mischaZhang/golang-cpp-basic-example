@@ -3,8 +3,8 @@
 extern "C" {
 #endif
 
-int cpu_intensive(int n);
-int io_intensive();
+int CPUIN(int n);
+int IOIN();
 
 #ifdef __cplusplus
 }  // extern "C"
